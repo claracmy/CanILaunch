@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag "projects" %>
+
+<h1>Projects
+<div class="btn btn-primary btn-lg pull-right" id="new_project_btn"><%= link_to 'New Project', new_project_path, class:"new_project_btn_text" %></div></h1>
+
+<br>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Link</th>
+      <th>User</th>
+      <th>Date Posted</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.description %></td>
+        <td><%= project.link %></td>
+        <td><% if project.user.name? %>
+            <%= project.user.name %>
+            <% else %>
+            <%= project.user.email %>
+            <% end %>
+        </td>
+        <td><%= project.created_at.strftime("%b %d, %Y") %></td>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag project.thumbnail_uri, :size => "200x200" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

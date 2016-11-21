@@ -1,0 +1,61 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.jumbotron {
+  height: 600px;
+  background-image: url(hero.jpg);
+  margin-bottom: 0px;
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#jumbotron-title {
+  margin-top: 150px;
+  color: #fff;
+}
+
+#jumbotron-subtitle{
+  margin-top: 10px;
+  color: #fff;
+}
+
+#jumbotron-cta {
+  margin-top: 25px;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.fa{
+  font-size: 150px;
+}
+
+.features{
+  text-align: center;
+}
+
+.features-wrapper {
+  margin-top: 60px;
+}
+
+.testimonial-wrapper{
+  margin-top: 80px;
+  margin-bottom: 40px;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+#subheading-text {
+  color: #333;
+  text-align: center;
+}
+
+#paragraph-text {
+  text-align: center;
+}
+
+.testimonial {
+  text-align: center;
+}

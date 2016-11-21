@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag "projects" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @project.link %>
+</p>
+
+<%= image_tag @project.thumbnail_uri %>
+
+<p>
+  <strong>User:</strong>
+  <% if @project.user.name? %>
+  <%= @project.user.name %>
+  <% else %>
+  <%= @project.user.email %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Date Posted:</strong>
+  <%= @project.created_at.strftime("%b %d, %Y") %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

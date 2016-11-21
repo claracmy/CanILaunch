@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<head>
+  <title>Can I Launch?</title>
+<%= stylesheet_link_tag "pages" %>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Condensed');
+</style>
+</head>
+
+<body>
+<div id="home">
+<div class="jumbotron">
+  <div class="container">
+    <div id="jumbotron-title">
+      <h2 class="jumbotron-title">Be The Next Big Thing</h2>
+    </div>
+    <div id="jumbotron-subtitle">
+      <h3 class="jumbotron-subtitle">Ask the Internet whether your website is ready to launch</h3>
+    </div>
+    <div>
+      <%= link_to "Start Now", new_user_registration_path, :class => 'btn btn-primary btn-lg', data: { toggle: "modal", target: "#SignupModel", remote: false } %>
+    </div>
+  </div>
+</div>
+
+<div class="features-wrapper">
+  <h2 id="subheading-text">Features</h2>
+  <div class="row">
+    <div class="features col-md-4"><i class="fa fa-commenting-o" aria-hidden="true"></i><h4>Get Useful Feedback</h4></div>
+    <div class="features col-md-4"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><h4>Review and Gain Karma</h4></div>
+    <div class="features col-md-4"><i class="fa fa-smile-o" aria-hidden="true"></i><h4>Free of Charge</h4></div>
+  </div>
+</div>
+
+<div class="testimonial-wrapper">
+  <h2 id="subheading-text">Testimonials</h2>
+  <p id="paragraph-text">P.S. We don't have any yet so these animals volunteered</p>
+  <div class="row">
+    <div class="testimonial col-md-4"><img src="http://i.imgur.com/WH7HYB2.png"></img><h4>Mr.Horse</h4><br><p id="#paragraph-text">I asked CanIlaunch for feedback and they helped me improve my landing page design!</p></div>
+    <div class="testimonial col-md-4"><img src="http://i.imgur.com/ZtHuGsp.png"></img><h4>Mr.Chicken</h4><br><p id="#paragraph-text">The community at CanILaunch helped me identify bugs in my app!</p></div>
+    <div class="testimonial col-md-4"><img src="http://i.imgur.com/SMJoJfs.png"></img><h4>Mr.Dog</h4><br><p id="#paragraph-text">I realised new market potentials by posting on CanILaunch. It's as good as posting on Reddit!</p></div>
+  </div>
+</div>
+</div>
+</body>
